@@ -2,7 +2,8 @@
 
 A beautiful, modern chess game built with Next.js, TypeScript, and Tailwind CSS. Experience the timeless game of strategy with an elegant interface, smooth animations, and professional design.
 
-![Chess Game Screenshot](https://via.placeholder.com/800x400?text=Chess+Master+Game+Interface)
+![Chess Game Screenshot](<img width="1900" height="867" alt="image" src="https://github.com/user-attachments/assets/4d90ad8e-f0ba-41c8-9a5a-d431a645d3f7" />
+)
 
 ## ✨ Features
 
