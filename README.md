@@ -2,7 +2,8 @@
 
 A beautiful, modern chess game built with Next.js, TypeScript, and Tailwind CSS. Experience the timeless game of strategy with an elegant interface, smooth animations, and professional design.
 
-![Chess Game Screenshot](<img width="1900" height="869" alt="Screenshot_4" src="https://github.com/user-attachments/assets/133bb81b-f085-4417-9039-e43c95b74b41" />)
+![Chess Game Screenshot]<img width="1900" height="867" alt="image" src="https://github.com/user-attachments/assets/73dd06be-d2ee-4436-b971-9dd1438aa1b9" />
+
 
 ## ✨ Features
 
