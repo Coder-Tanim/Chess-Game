@@ -1,141 +1,276 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# Chess Master
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+A beautiful, modern chess game built with Next.js, TypeScript, and Tailwind CSS. Experience the timeless game of strategy with an elegant interface, smooth animations, and professional design.
 
-## ✨ Technology Stack
+![Chess Game Screenshot](https://via.placeholder.com/800x400?text=Chess+Master+Game+Interface)
 
-This scaffold provides a robust foundation built with:
+## ✨ Features
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+### 🎮 **Gameplay Features**
+- **Complete Chess Implementation** - Full chess rules with proper move validation
+- **Check & Checkmate Detection** - Automatic detection of game-ending conditions
+- **Stalemate Detection** - Proper draw condition handling
+- **Move History** - Real-time algebraic notation of all moves
+- **Captured Pieces Display** - Visual tracking of all captured pieces
+- **Undo Functionality** - Take back moves during the game
+- **Game Controls** - New game, resign, and game status management
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+### 🎨 **Visual Features**
+- **Modern UI Design** - Beautiful gradient backgrounds and glassmorphism effects
+- **Smooth Animations** - Hover effects, piece movements, and transitions
+- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
+- **Dark Mode Support** - Automatic adaptation to system theme preferences
+- **Professional Chess Board** - Traditional 8x8 board with coordinate labels
+- **Visual Move Indicators** - Clear highlighting of valid moves and selected pieces
+- **Game Result Modal** - Elegant announcements for checkmate and stalemate
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
-
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
-
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
-
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
-
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
-
-## 🎯 Why This Scaffold?
-
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+### 🔧 **Technical Features**
+- **TypeScript** - Type-safe development experience
+- **Next.js 15** - Latest React framework with App Router
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui Components** - Beautiful, accessible UI components
+- **Custom Game Logic** - Robust chess engine implementation
+- **State Management** - Clean state management with React hooks
 
 ## 🚀 Quick Start
 
-```bash
-# Install dependencies
-npm install
+### Prerequisites
 
-# Start development server
-npm run dev
+Before you begin, ensure you have the following installed on your system:
+- **Node.js** (version 18.0 or higher)
+- **npm** (usually comes with Node.js) or **yarn**
+- **Git** (for cloning the repository)
 
-# Build for production
-npm run build
+### Installation
 
-# Start production server
-npm start
-```
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd chess-game
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or if you prefer yarn
+   yarn install
+   ```
 
-## 🤖 Powered by Z.ai
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or with yarn
+   yarn dev
+   ```
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the chess game in action.
 
 ## 📁 Project Structure
 
 ```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+chess-game/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx              # Main application page
+│   │   ├── layout.tsx            # Root layout component
+│   │   └── globals.css           # Global styles
+│   ├── components/
+│   │   ├── chess/
+│   │   │   ├── ChessBoard.tsx     # Main chess board component
+│   │   │   ├── GameControls.tsx   # Game control buttons
+│   │   │   ├── GameStatus.tsx     # Game status display
+│   │   │   ├── MoveHistory.tsx    # Move history display
+│   │   │   ├── CapturedPieces.tsx # Captured pieces display
+│   │   │   └── GameResultModal.tsx # Game result modal
+│   │   └── ui/                   # shadcn/ui components
+│   ├── hooks/
+│   │   ├── use-chess-game.ts     # Custom game state hook
+│   │   └── use-toast.ts          # Toast notification hook
+│   └── lib/
+│       ├── chess-logic.ts       # Core chess game logic
+│       ├── db.ts                # Database utilities
+│       ├── socket.ts            # Socket.io configuration
+│       └── utils.ts             # Utility functions
+├── public/
+│   ├── favicon.ico              # Application favicon
+│   ├── logo.svg                # Application logo
+│   └── robots.txt              # SEO robots file
+├── prisma/
+│   └── schema.prisma           # Database schema
+├── package.json                # Project dependencies and scripts
+├── tailwind.config.ts          # Tailwind CSS configuration
+├── tsconfig.json              # TypeScript configuration
+├── next.config.ts             # Next.js configuration
+└── README.md                  # This file
 ```
 
-## 🎨 Available Features & Components
+## 🎯 How to Play
 
-This scaffold includes a comprehensive set of modern web development tools:
+### Basic Rules
+1. **White always moves first** - The game starts with White's turn
+2. **Click a piece to select it** - Selected pieces are highlighted with a blue ring
+3. **Click a valid destination** - Valid moves are shown with colored indicators:
+   - 🟢 Green dots for empty squares
+   - 🔴 Red dots for squares with enemy pieces
+4. **Capture pieces** - Move your piece to a square occupied by an enemy piece
+5. **Protect your king** - Avoid moves that leave your king in check
+6. **Achieve checkmate** - Trap the opponent's king to win the game
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+### Game Controls
+- **New Game** - Start a fresh game with all pieces in starting positions
+- **Undo Move** - Take back the last move (disabled when game ends)
+- **Resign** - Give up the current game (disabled when game ends)
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+### Game Status Indicators
+- **Playing** - Normal game progression
+- **Check** - King is under attack (warning icon appears)
+- **Checkmate** - Game over with a winner (trophy icon appears)
+- **Stalemate** - Game ends in a draw (scale icon appears)
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+## 🔧 Development
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+### Available Scripts
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
+```bash
+# Development server
+npm run dev
 
-## 🤝 Get Started with Z.ai
+# Production build
+npm run build
 
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+# Start production server
+npm start
+
+# Code linting
+npm run lint
+
+# Type checking
+npm run type-check
+
+# Format code
+npm run format
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory for environment-specific configuration:
+
+```env
+# Optional: Database configuration (if using database features)
+DATABASE_URL="your-database-url"
+
+# Optional: API keys for external services
+NEXT_PUBLIC_API_KEY="your-api-key"
+```
+
+### Building for Production
+
+1. **Build the application**
+   ```bash
+   npm run build
+   ```
+
+2. **Start the production server**
+   ```bash
+   npm start
+   ```
+
+The production build will be optimized for performance and deployed to the `out` directory.
+
+## 🎨 Customization
+
+### Theming
+
+The application uses Tailwind CSS with a sophisticated color scheme. You can customize colors by modifying:
+
+1. **Tailwind Config** - Update `tailwind.config.ts`
+2. **CSS Variables** - Modify custom properties in `src/app/globals.css`
+3. **Component Styles** - Adjust individual component styles
+
+### Adding New Features
+
+The codebase is modular and extensible:
+
+1. **Game Logic** - Extend `src/lib/chess-logic.ts` for new chess variants
+2. **UI Components** - Add new components in `src/components/chess/`
+3. **State Management** - Modify `src/hooks/use-chess-game.ts` for new game states
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Port Already in Use**
+```bash
+# Kill process on port 3000
+lsof -ti:3000 | xargs kill -9
+
+# Or use a different port
+PORT=3001 npm run dev
+```
+
+**Dependency Issues**
+```bash
+# Clear node modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+
+**TypeScript Errors**
+```bash
+# Clear Next.js cache
+rm -rf .next
+npm run dev
+```
+
+**Build Issues**
+```bash
+# Clean build
+npm run clean
+npm run build
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Make your changes**
+4. **Run tests and linting** (`npm run lint`)
+5. **Commit your changes** (`git commit -m 'Add amazing feature'`)
+6. **Push to the branch** (`git push origin feature/amazing-feature`)
+7. **Open a Pull Request**
+
+### Development Guidelines
+
+- Follow TypeScript best practices
+- Use existing UI components from `src/components/ui/`
+- Maintain consistent code style
+- Add appropriate comments for complex logic
+- Test your changes thoroughly
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Next.js** - React framework for production
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful UI components
+- **Lucide React** - Beautiful icons
+- **TypeScript** - Type-safe JavaScript
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. **Check the troubleshooting section** above
+2. **Search existing issues** in the repository
+3. **Create a new issue** with detailed description
+4. **Contact the maintainers** for urgent matters
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+**Built with ❤️ using Next.js, TypeScript, and Tailwind CSS**
